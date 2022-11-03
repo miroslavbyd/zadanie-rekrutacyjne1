@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Table_C">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_C1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Col_C2" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Col_C3" Type="Int32" />
+    <Property Name="Col_C4" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="DevDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Table_C" EntityType="Self.Table_C" />
+    <EntitySet Name="Table_A" EntityType="DevDataModel.Table_A" />
+    <EntitySet Name="Table_B" EntityType="DevDataModel.Table_B" />
+  </EntityContainer>
+  <EntityType Name="Table_A">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_A1" Type="Int32" />
+    <Property Name="Col_A2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Col_A3" Type="DateTime" Precision="0" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Table_B">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_B1" Type="Int32" />
+    <Property Name="Col_B2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Col_B3" Type="Int32" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

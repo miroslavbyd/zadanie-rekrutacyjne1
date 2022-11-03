@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Table_A">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_A1" Type="int" />
+    <Property Name="Col_A2" Type="varchar" MaxLength="10" />
+    <Property Name="Col_A3" Type="date" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_B">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_B1" Type="int" />
+    <Property Name="Col_B2" Type="nchar" MaxLength="10" />
+    <Property Name="Col_B3" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_C">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Col_C1" Type="varchar" MaxLength="10" />
+    <Property Name="Col_C2" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Col_C3" Type="int" />
+    <Property Name="Col_C4" Type="char" MaxLength="10" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DevDataModelStoreContainer">
+    <EntitySet Name="Table_A" EntityType="Self.Table_A" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_B" EntityType="Self.Table_B" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_C" EntityType="Self.Table_C" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

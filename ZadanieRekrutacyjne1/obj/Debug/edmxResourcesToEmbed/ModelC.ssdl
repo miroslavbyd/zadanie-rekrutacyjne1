@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DevDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DevData.dbo.Table_C' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Table_C">
+    <Key>
+      <PropertyRef Name="Col_C2" />
+    </Key>
+    <Property Name="Col_C1" Type="varchar" MaxLength="10" />
+    <Property Name="Col_C2" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Col_C3" Type="int" />
+    <Property Name="Col_C4" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="DevDataModelStoreContainer">
+    <EntitySet Name="Table_C" EntityType="Self.Table_C" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Table_C].[Col_C1] AS [Col_C1], 
+    [Table_C].[Col_C2] AS [Col_C2], 
+    [Table_C].[Col_C3] AS [Col_C3], 
+    [Table_C].[Col_C4] AS [Col_C4]
+    FROM [dbo].[Table_C] AS [Table_C]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
